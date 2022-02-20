@@ -5,6 +5,10 @@
   "scripts": {
     "rollup": "rollup -c"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryantkhoo/template-react-component-libary.git"
+  },
   "author": "Bryant Khoo",
   "license": "ISC",
   "devDependencies": {
