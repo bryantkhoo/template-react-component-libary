@@ -11,16 +11,21 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.main,
+        // file: packageJson.main,
+        dir: 'dist',
         format: 'cjs',
         sourcemap: true,
+        preserveModules: true,
       },
       {
-        file: packageJson.module,
+        // file: packageJson.module,
+        dir: 'dist',
         format: 'esm',
         sourcemap: true,
+        preserveModules: true,
       },
     ],
+    external: [/node_modules/],
     plugins: [
       resolve(),
       commonjs(),
@@ -29,7 +34,7 @@ export default [
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
     external: [/\.css$/],
