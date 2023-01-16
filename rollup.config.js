@@ -4,9 +4,9 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import replace from "@rollup/plugin-replace";
 import { terser } from "rollup-plugin-terser";
-import { getFolders } from "./scripts/buildUtils";
 import generatePackageJson from "rollup-plugin-generate-package-json";
 import css from "rollup-plugin-import-css";
+import { getFolders } from "./scripts/buildUtils";
 
 const packageJson = require("./package.json");
 
